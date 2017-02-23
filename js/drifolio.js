@@ -46,8 +46,8 @@ $(function() {
 }(jQuery));
 $(function(){
   $("#contact").submit(function(event){
-    var nom        = $("#name").val();
-    var sujet      = $("#subject").val();
+    var nom        = $("#nom").val();
+    var sujet      = $("#sujet").val();
     var mail      = $("#email").val();
     var msg    = $("#message").val();
     var dataString = nom + sujet + mail + msg;
@@ -67,7 +67,7 @@ $(function(){
       $.ajax({
         url: "https://formspree.io/etienne.pasteur@epitech.eu", 
         method: "POST",
-        data: {name: $("#name").val(), email: $("#email").val(), subject: $("#subject").val() , message: $("#message").val()},
+        data: {name: $("#nom").val(), email: $("#email").val(), subject: $("#sujet").val() , message: $("#message").val()},
         dataType: "json",
         success : function() {
           $("#contact").html("<p>Le mail a bien été envoyé</p>");
