@@ -10,7 +10,6 @@
 	<title>Etienne Pasteur - Développeur Informatique à Lyon Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
 	<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
-	<script src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 	<link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
 	<link rel="icon" href="img/favicon.png">
 	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
@@ -99,49 +98,6 @@
 		</div>
 	</div>
 	<hr>
-<!-- 	<div class="icando">
-		<div id="services" class="container">
-			<div class="sectionhead" data-wow-duration="2s">
-				<span class="bigicon icon-cup"></span>
-				<h3>Mes Compétances</h3>
-				<h4>Voici ce que je peut faire pour vous</h4>
-				<hr class="separetor">
-			</div>
-	        <div class="row">
-	               <div class="col-md-6 col-lg-4">
-	                   <img src="img/s1.png" alt="">
-	                   <h4>Responsive Web Design</h4>
-	                   <p>Grinder affogato, dark, sweet carajillo, flavour seasonal aroma single origin cream. Percolator. Eligendi impedit dolores nulla.</p>
-	                </div>
-	                <div class="col-md-6 col-lg-4">
-	                   <img src="img/s2.png" alt="">
-	                   <h4>Android App Design</h4>
-	                   <p>Grinder affogato, dark, sweet carajillo, flavour seasonal aroma single origin cream. Percolator. Eligendi impedit dolores nulla.</p>
-	                </div>
-	                <div class="col-md-6 col-lg-4">
-	                   <img src="img/s3.png" alt="">
-	                   <h4>iOS App Design</h4>
-	                   <p>Grinder affogato, dark, sweet carajillo, flavour seasonal aroma single origin cream. Percolator. Eligendi impedit dolores nulla.</p>
-	                </div>
-	               <div class="col-md-6 col-lg-4">
-	                   <img src="img/s4.png" alt="">
-	                   <h4>Windows App Design</h4>
-	                   <p>Grinder affogato, dark, sweet carajillo, flavour seasonal aroma single origin cream. Percolator. Eligendi impedit dolores nulla.</p>
-	                </div>
-	                <div class="col-md-6 col-lg-4">
-	                   <img src="img/s5.png" alt="">
-	                   <h4>Brand Identity Design</h4>
-	                   <p>Grinder affogato, dark, sweet carajillo, flavour seasonal aroma single origin cream. Percolator. Eligendi impedit dolores nulla.</p>
-	                </div>
-	                <div class="col-md-6 col-lg-4">
-	                   <img src="img/s6.png" alt="">
-	                   <h4>CMYK Print Design</h4>
-	                   <p>Grinder affogato, dark, sweet carajillo, flavour seasonal aroma single origin cream. Percolator. Eligendi impedit dolores nulla.</p>
-					</div>
-			</div>
-		</div>
-	</div>
- -->
 	<div id="testimonials" class="container">
 		<div class="sectionhead" data-wow-duration="2s">
 			<span class="bigicon icon-briefcase"></span>
@@ -350,7 +306,32 @@
 			</div>
 
 			<div id="form_contact">
-				<form id="contact" class="contact-form" action="php/process.php" method="POST">
+
+
+				<form id="contact" class="contact-form" action="https://formspree.io/etienne.pasteur@epitech.eu" method='POST'>
+					<p>
+						<input id="nom" name="name" placeholder="Votre Nom" type="text">
+						<span id="msg_nom"></span>
+					</p>
+					<p>
+						<input id="sujet" name="subject" placeholder="Sujet" type="text">
+						<span id="msg_sujet"></span>
+					</p>
+					<p>
+						<input id="email" name="email" placeholder="Votre Email" type="email">
+						<span id="msg_email"></span>
+					</p>
+					<p>
+						<textarea id="message" name="message" placeholder="Votre Message" rows="7" cols="40"></textarea>
+						<span id="msg_message"></span>
+					</p>
+					<p>
+						<input type="submit" value="Envoyer" />
+					</p>
+				</form>
+
+
+<!-- 				<form id="contact" class="contact-form" action="php/process.php" method="POST">
 					<p>
 						<input id="nom" name="nom" placeholder="Votre Nom" type="text">
 						<span id="msg_nom"></span>
@@ -370,8 +351,11 @@
 					<p>
 						<input type="submit" value="Envoyer" />
 					</p>
-				</form>
-				<span id="msg_all"></span> 
+				</form> -->
+
+
+
+				<span id="msg_all"></span>
 			</div>
 		</div>
 		<p>&nbsp</p>
@@ -396,7 +380,7 @@
 			</ul>
 		</div>
 		<div class="copyright">
-			<p>2015-2016 Pasteur Etienne.</p>
+			<p>2015-2017 Pasteur Etienne.</p>
 		</div>
 	</footer>
 	<script src="fancybox/lib/jquery-1.10.1.min.js"></script>

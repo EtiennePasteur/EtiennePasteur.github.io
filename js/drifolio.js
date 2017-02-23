@@ -46,18 +46,18 @@ $(function() {
 }(jQuery));
 $(function(){
   $("#contact").submit(function(event){
-    var nom        = $("#nom").val();
-    var sujet      = $("#sujet").val();
+    var name        = $("#name").val();
+    var subject      = $("#subject").val();
     var email      = $("#email").val();
     var message    = $("#message").val();
-    var dataString = nom + sujet + email + message;
+    var dataString = name + subject + email + message;
     var msg_all    = "Merci de remplir tous les champs";
     var msg_alert  = "Merci de remplir ce champ";
     if (dataString  == "") {
       $("#msg_all").html(msg_all);
-    } else if (nom == "") {
+    } else if (name == "") {
       $("#msg_nom").html(msg_alert);
-    } else if (sujet == "") {
+    } else if (subject == "") {
       $("#msg_sujet").html(msg_alert);
     } else if (email == "") {
       $("#msg_email").html(msg_alert);
