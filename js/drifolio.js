@@ -46,28 +46,29 @@ $(function() {
 }(jQuery));
 $(function(){
   $("#contact").submit(function(event){
-    var name        = $("#name").val();
-    var subject      = $("#subject").val();
-    var email      = $("#email").val();
-    var message    = $("#message").val();
-    var dataString = name + subject + email + message;
+    var nom        = $("#name").val();
+    var sujet      = $("#subject").val();
+    var mail      = $("#email").val();
+    var msg    = $("#message").val();
+    var dataString = nom + sujet + mail + msg;
     var msg_all    = "Merci de remplir tous les champs";
     var msg_alert  = "Merci de remplir ce champ";
     if (dataString  == "") {
       $("#msg_all").html(msg_all);
-    } else if (name == "") {
+    } else if (nom == "") {
       $("#msg_nom").html(msg_alert);
-    } else if (subject == "") {
+    } else if (sujet == "") {
       $("#msg_sujet").html(msg_alert);
-    } else if (email == "") {
+    } else if (mail == "") {
       $("#msg_email").html(msg_alert);
-    } else if (message == "") {
+    } else if (msg == "") {
       $("#msg_message").html(msg_alert);
     } else {
       $.ajax({
-        type : "POST",
-        url: $(this).attr("action"),
-        data: $(this).serialize(),
+        url: "https://formspree.io/etienne.pasteur@epitech.eu", 
+        method: "POST",
+        data: {name: $("#name").val(), email: $("#email").val(), subject: $("#subject").val() , message: $("#message").val()},
+        dataType: "json",
         success : function() {
           $("#contact").html("<p>Le mail a bien été envoyé</p>");
         },
@@ -75,6 +76,17 @@ $(function(){
           $("#contact").html("<p>Erreur, l'envoi du mail a échoué.</p>");
         }
       });
+      // $.ajax({
+      //   type : "POST",
+      //   url: $(this).attr("action"),
+      //   data: $(this).serialize(),
+      //   success : function() {
+      //     $("#contact").html("<p>Le mail a bien été envoyé</p>");
+      //   },
+      //   error: function() {
+      //     $("#contact").html("<p>Erreur, l'envoi du mail a échoué.</p>");
+      //   }
+      // });
     }
     return false;
   });
