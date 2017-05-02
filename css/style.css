@@ -71,7 +71,7 @@ hr.separetor{
 #hero{
     color: #fff;
     text-align: center;
-    background: url(../img/trianglify-background.svg)no-repeat;
+    background: url(../img/background.jpg)no-repeat;
     max-height: 880px;
     overflow: hidden;
 }
